@@ -16,10 +16,8 @@ Prerequisites;
    
    Sample Output:
    
-   =========================================================================
     Initial Opinion Lexicon 
     ['great']
-    =========================================================================
     All possible features are :
     ['G3', 'picture', 'storage', 'movies', 'software', 'pictures']
     Expanded opinion lexicon is :
