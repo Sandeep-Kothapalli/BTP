@@ -10,9 +10,9 @@ Prerequisites;
   
   Sample input (in review-data.txt):
   
-   Canon G3 takes great pictures. The picture is amazing. You may have to get more storage to store high quality pictures and     recorded movies. The software is amazing. 
-   
-   O = ['great']
+     Canon G3 takes great pictures. The picture is amazing. You may have to get more storage to store high quality pictures and recorded movies. The software is amazing. 
+
+     O = ['great']
    
    Sample Output:
    
