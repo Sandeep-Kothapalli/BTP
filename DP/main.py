@@ -27,16 +27,6 @@ def main():
     reviewData = open(reviewFile)
     text = reviewData.readline()
     sentences = nltk.sent_tokenize(text)
-    # dependency graph contains the dep graph in triples for each sentence
-    # for sentence in sentences:
-    #     print()
-    #     print(sentence)
-    #     print()
-    #     res, = dependencyParser.raw_parse(sentence)
-    #     for a,b,c in res.triples():
-    #         # print(a,b,c)
-    #         print(a[0], a[1], b, c[0], c[1])
-
     print("=========================================================================")
     O = ["great"] #opinion wordd dictionary
     print("Initial Opinion Lexicon ")
@@ -68,7 +58,6 @@ def main():
                         F_i.append(a[0]) 
                     elif ((c[1] in NN) & (c[0] not in F)) :
                         F_i.append(c[0]) 
-                    # print(a[0], a[1], b, c[0], c[1])
         F = F+F_i
         O_Expanded = O_Expanded+O_i
         # handled a case specifically for coordinating conjunctions
@@ -84,7 +73,6 @@ def main():
                     for f in F_i:
                         if(f.startswith(c[0]) or c[0].startswith(f)):
                             O_prime.append(a[0]) 
-                            # break
         F_i = F_i+F_prime
         O_i = O_i+O_prime
         F = list(set(F+F_prime))
@@ -92,7 +80,6 @@ def main():
     # remove plurals
     for feature in F:
         stemmer.stem(feature)
-        # print(feature)
     F = list(set(F))
     print("All possible features are :")
     print(F)
